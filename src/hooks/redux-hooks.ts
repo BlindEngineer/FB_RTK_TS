@@ -1,0 +1,8 @@
+//Кастомные хуки которые будем исп в качестве юз селектор и юз диспатч
+
+import {AppDispatch, RootState} from "../store";
+import {TypedUseSelectorHook, useDispatch, useSelector} from "react-redux";
+
+export const useAppDispatch = () => useDispatch<AppDispatch>();
+
+export const useAppSelector: TypedUseSelectorHook<RootState> = () => useSelector;
